@@ -1,0 +1,113 @@
+@charset "utf-8";
+$circleSize:200px;// 圆的尺寸
+$circleLineSize:6px;//圆环的宽度
+$circleColor:#56aef0;
+$circleLineColor:#fff;
+$textColor:#fff;
+$bgColor:#1a90e9;
+body,
+p {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+	font-family:"Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+    background-color: #fff;
+}
+header {
+    background-color: $bgColor;
+    overflow: hidden;
+}
+.circle-wrap .show {
+    opacity: 1;
+}
+.circle-wrap {
+    width: $circleSize;
+    height: $circleSize;
+    border-radius: $circleSize/2;
+    position: relative;
+    background: $circleColor;
+    margin: 32px auto;
+}
+.circle-left-wrap {
+    position: absolute;
+    width: $circleSize/2;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+.circle-left {
+    opacity: 0;
+    width: $circleSize;
+    height: $circleSize;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: $circleSize/2;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), color-stop(0.5, transparent), color-stop(0.5, $circleLineColor), to($circleLineColor));
+}
+.circle-right-wrap {
+    position: absolute;
+    width: $circleSize/2;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+.circle-right {
+    opacity: 0;
+    width: $circleSize;
+    height: $circleSize;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    border-radius: $circleSize/2;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from($circleLineColor), color-stop(50%, $circleLineColor), color-stop(50%, transparent), to(transparent));
+}
+.dot {
+    display: none;
+    width: $circleLineSize;
+    height: $circleLineSize;
+    border-radius: $circleLineSize/2;
+    background-color: #fff;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -$circleLineSize/2;
+}
+.left-dot {
+    bottom: 0;
+}
+.center-dot {
+    top: 0;
+}
+.right-dot {
+    top: 0;
+}
+.circle-center-wrap {
+    position: absolute;
+    top: $circleLineSize;
+    left: $circleLineSize;
+    right: $circleLineSize;
+    bottom: $circleLineSize;
+    border-radius: $circleSize/2-$circleLineSize;
+    background: $bgColor;
+    color: $textColor;
+    z-index: 9;
+    .inner {
+        width: 100%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        text-align: center;
+        height: 100%;
+    }
+    .number {
+        font-size: 48px;
+    }
+    .unit{
+    	font-size: 26px;
+    }
+}

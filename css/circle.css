@@ -1,0 +1,136 @@
+/* line 8, ../sass/circle.scss */
+body,
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 13, ../sass/circle.scss */
+body {
+  font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+  background-color: #fff;
+}
+
+/* line 17, ../sass/circle.scss */
+header {
+  background-color: #1a90e9;
+  overflow: hidden;
+}
+
+/* line 21, ../sass/circle.scss */
+.circle-wrap .show {
+  opacity: 1;
+}
+
+/* line 24, ../sass/circle.scss */
+.circle-wrap {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  position: relative;
+  background: #56aef0;
+  margin: 32px auto;
+}
+
+/* line 32, ../sass/circle.scss */
+.circle-left-wrap {
+  position: absolute;
+  width: 100px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+/* line 40, ../sass/circle.scss */
+.circle-left {
+  opacity: 0;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100px;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), color-stop(0.5, transparent), color-stop(0.5, #fff), to(#fff));
+}
+
+/* line 50, ../sass/circle.scss */
+.circle-right-wrap {
+  position: absolute;
+  width: 100px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+/* line 58, ../sass/circle.scss */
+.circle-right {
+  opacity: 0;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  border-radius: 100px;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(#fff), color-stop(50%, #fff), color-stop(50%, transparent), to(transparent));
+}
+
+/* line 68, ../sass/circle.scss */
+.dot {
+  display: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #fff;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* line 79, ../sass/circle.scss */
+.left-dot {
+  bottom: 0;
+}
+
+/* line 82, ../sass/circle.scss */
+.center-dot {
+  top: 0;
+}
+
+/* line 85, ../sass/circle.scss */
+.right-dot {
+  top: 0;
+}
+
+/* line 88, ../sass/circle.scss */
+.circle-center-wrap {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border-radius: 94px;
+  background: #1a90e9;
+  color: #fff;
+  z-index: 9;
+}
+/* line 98, ../sass/circle.scss */
+.circle-center-wrap .inner {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  text-align: center;
+  height: 100%;
+}
+/* line 107, ../sass/circle.scss */
+.circle-center-wrap .number {
+  font-size: 48px;
+}
+/* line 110, ../sass/circle.scss */
+.circle-center-wrap .unit {
+  font-size: 26px;
+}

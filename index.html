@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta charset="UTF-8">
+	<title>圆形流量统计</title>
+	<link rel="stylesheet" href="css/circle.css">
+</head>
+<body>
+	<header>
+		<div class="circle-wrap">
+			<div class="circle-left-wrap">
+				<div id="j-circle-left" class="circle-left">
+					<div id="j-left-dot" class="left-dot dot"></div>
+				</div>
+			</div>
+			<div class="circle-right-wrap">
+				<div id="j-circle-right" class="circle-right">
+					<div id="j-right-dot" class="right-dot dot"></div>
+				</div>
+			</div>
+			<div class="circle-center-wrap">
+				<div class="inner">
+					<p><span id="j-number" class="number">0</span><span class="unit">M</span></p>
+					<p>剩余流量</p>
+				</div>
+			</div>
+			<div id="j-center-dot" class="center-dot dot"></div>
+		</div>
+	</header>
+</body>
+<script src="js/zepto.min.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/circle.js"></script>
+<script>
+	circle.init(70,100);
+</script>
+</html>
